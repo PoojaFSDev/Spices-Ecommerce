@@ -1,0 +1,109 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* HERO */
+.hero {
+  height:100vh;/* Full viewport height minus navbar */
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+              url("spices.jpg") center center no-repeat ;
+  background-size: cover;  /* Make image fully cover section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-text {
+  font-size: 80px;
+  font-weight: 700;
+  color: white;
+  animation: fadeInDown 1.5s ease forwards;
+}
+
+/* CATEGORY CARDS */
+.category-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  transition: 0.4s;
+  transform: translateY(0);
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+}
+
+.category-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 25px 40px rgba(0,0,0,0.2);
+  background: linear-gradient(135deg, #ffc107, #ff5722);
+  color: #fff;
+}
+
+.category-card .icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+  transition: transform 0.4s;
+}
+
+.category-card:hover .icon {
+  transform: rotate(20deg) scale(1.2);
+}
+
+/* PRODUCT CARDS */
+.product-card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.product-card img {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.product-card:hover img {
+  transform: scale(1.1);
+}
+
+.price {
+  font-weight: bold;
+}
+
+/* CONTACT INPUTS */
+.contact input,
+.contact textarea {
+  border-radius: 30px;
+  padding: 12px 20px;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  color: #fff;
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
